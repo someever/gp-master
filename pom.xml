@@ -21,6 +21,10 @@
         <module>gp-ucenter</module>
         <module>gp-billing</module>
         <module>gp-connector</module>
+        <module>gp-component-config</module>
+        <module>gp-component-registry</module>
+        <module>gp-component-gateway</module>
+        <module>gp-component-monitor</module>
     </modules>
 
     <dependencyManagement>
