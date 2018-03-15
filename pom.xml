@@ -22,10 +22,15 @@
         <module>gp-billing</module>
         <module>gp-connector</module>
         <module>gp-component-config</module>
-        <module>gp-component-registry</module>
+        <module>gp-component-discovery</module>
         <module>gp-component-gateway</module>
         <module>gp-component-monitor</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven-compiler.version>2.3</maven-compiler.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -38,4 +43,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler.version}</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

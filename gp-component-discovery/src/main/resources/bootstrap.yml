@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: discovery
+server:
+  port: 9094
+eureka:
+  instance:
+    hostname: localhost
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 10
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 60000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    registry-fetch-interval-seconds: 30
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+security:
+  user:
+    name: admin
+    password: Admin123
+  basic:
+    enabled: true
