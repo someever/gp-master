@@ -2,7 +2,7 @@ spring:
   application:
     name: discovery
 server:
-  port: 9094
+  port: 9001
 eureka:
   instance:
     hostname: localhost
