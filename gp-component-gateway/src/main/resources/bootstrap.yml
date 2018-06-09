@@ -1,0 +1,16 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: default
+      name: ${spring.application.name},database,application
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:Admin123@localhost:9001/eureka
